@@ -1,0 +1,15 @@
+body {
+    margin-top: 30px;
+}
+
+#messageArea {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
+.privateMsg {
+    color: violet;
+}

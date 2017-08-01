@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Chat</title>
+        
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <div id="userFormArea" class="row">
+                <div class="col-md-12">
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label>Enter your nick name</label>
+                            <input  id="userName" class="form-control">
+                            <br>
+                            <input type="submit" class="btn btn-primary" value="Log In">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row" id="messageArea">
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3>Online Users</h3>
+                        <ul class="list-group" id="users">
+
+                        </ul>
+                        <p>
+                            To send a private message use: <br>
+                            #for [username] [message] <br>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="chat" id="chat">
+
+                    </div>
+                    <div id="isTyping">
+
+                    </div>
+                    
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label>Enter Message Here:</label>
+                            <textarea  id="message" class="form-control"></textarea>
+                            <br>
+                            <input type="submit" class="btn btn-success" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
